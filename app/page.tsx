@@ -36,10 +36,9 @@ export default function Home() {
   // This helps React treat every "Open" as a brand new instance
   const [pickerId, setPickerId] = useState(0);
 
-  const CLIENT_ID =
-    '131449573592-iijnqpmuimmvo370q9q5b1p8cac9pt5d.apps.googleusercontent.com';
-  const APP_ID = 'project-443d0780-9616-4fde-9c4';
-  const API_KEY = 'AIzaSyBtd_lUL6wP5nwasyRqnkkZZgNLQPmEInk';
+  const CLIENT_ID = process.env.CLIENT_ID;
+  const APP_ID = process.env.APP_ID;
+  const API_KEY = process.env.API_KEY;
 
   const handleOpenPicker = () => {
     setPickerId((prev) => prev + 1);
